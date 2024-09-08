@@ -3,9 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>VRP Benchmarks Leaderboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .leaderboard {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: center;
+      }
+      thead {
+        background-color: #3498db;
+        color: #fff;
+      }
+      th {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .model-name {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      @media (max-width: 768px) {
+        .leaderboard {
+          overflow-x: auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>VRP Leaderboard</h1>
+    <h1>VRP Benchmarks Leaderboard</h1>
+    <div class="leaderboard">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>CVRP10</th>
+            <th>CVRP20</th>
+            <th>CVRP50</th>
+            <th>CVRP100</th>
+            <th>CVRP200</th>
+            <th>CVRP500</th>
+            <th>CVRP1000</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">OR-tools</td>
+            <td>1.4284</td>
+            <td>1.6624</td>
+            <td>1.3793</td>
+            <td>1.1513</td>
+            <td>1.0466</td>
+            <td>0.8642</td>
+            <td>-</td>
+          </tr>
+          <!-- Add more rows for additional models here -->
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
